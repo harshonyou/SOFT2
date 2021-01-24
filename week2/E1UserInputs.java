@@ -2,7 +2,7 @@ package week2;
 
 import java.util.Scanner;
 
-public class E1_UserInputs {
+public class E1UserInputs {
     public static void main(String[] args){
         Scanner keyboard = new Scanner (System.in);
         System.out.println("Enter a int: ");
