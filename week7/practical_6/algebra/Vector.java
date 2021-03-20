@@ -1,4 +1,5 @@
-package week7.practical_6;
+package week7.practical_6.algebra; // algebra
+
 
 public class Vector {
     private double arr[];
@@ -23,10 +24,16 @@ public class Vector {
     }
 
     public Double get(int index){
+        if (index<0 || index>=arr.length){
+            throw new InvalidDimensionException(Integer.toString(index));
+        }
         return arr[index];
     }
 
     public Double set(int index, double value){
+        if (index<0 || index>=arr.length){
+            throw new InvalidDimensionException(Integer.toString(index));
+        }
         double d = arr[index];
         arr[index] = value;
         return d;
@@ -40,9 +47,9 @@ public class Vector {
         return new Vector(ar);
     }
 
-    public Vector add(Vector other){
+    public Vector add(Vector other) throws IncompatibleDimensionException{
         if(arr.length != other.size()){
-            return null;
+            throw new IncompatibleDimensionException(Integer.toString(other.size()));
         }
         double [] ar = arr.clone();
         for(int i=0; i<ar.length; i++){
@@ -79,10 +86,18 @@ public class Vector {
         System.out.println(a.scalarProduct(5.0).toString());
         System.out.println(a.toString());
 
-        System.out.println(a.add(a));
+        double [] dd = {1.0,2.0,3.0,4.0};
+        Vector b = new Vector(dd);
+
+        try {
+            System.out.println(a.add(b));
+        } catch (IncompatibleDimensionException e) {
+            System.out.println("cannt perform vector addititon as the dimentison are not compatible");
+            e.printStackTrace();
+        }
         System.out.println(a.toString());
 
-        Vector b = new Vector(d);
-        System.out.println(a.equals(b));
+        Vector bb = new Vector(d);
+        System.out.println(a.equals(bb));
     }
 }
