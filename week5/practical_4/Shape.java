@@ -1,14 +1,15 @@
-package week5.practical_4;
+// package week5.practical_4;
 
 public class Shape {
     public String color;
     public boolean filled;
 
-    public Shape(){
+    public Shape() {
         color = "red";
         filled = true;
     }
-    public Shape(String color, boolean filled){
+
+    public Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
     }
@@ -31,6 +32,6 @@ public class Shape {
 
     @Override
     public String toString() {
-        return "A Shape with color of "+color+" and "+(filled?"Filled":"Not Filled");
+        return "A Shape with color of " + color + " and " + (filled ? "Filled" : "Not Filled");
     }
 }

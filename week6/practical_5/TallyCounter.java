@@ -1,4 +1,4 @@
-package week6.practical_5;
+// package week6.practical_5;
 
 public class TallyCounter {
     private int counter;

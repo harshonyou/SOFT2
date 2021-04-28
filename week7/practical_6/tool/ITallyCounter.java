@@ -1,4 +1,4 @@
-package week7.practical_6.tool;
+package tool;
 
 public interface ITallyCounter {
 

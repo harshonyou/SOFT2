@@ -1,10 +1,10 @@
-package week5.practical_4;
+// package week5.practical_4;
 
 public class Line extends Point {
     public Point start, end;
     private String color;
 
-    public Line(Point start, Point end){
+    public Line(Point start, Point end) {
         this.start = start;
         this.end = end;
         this.color = "black";
@@ -28,8 +28,8 @@ public class Line extends Point {
         return end;
     }
 
-    public double getLength(){
-        return Math.sqrt( Math.pow((end.x - start.x), 2) + Math.pow((end.y - start.y), 2) );
+    public double getLength() {
+        return Math.sqrt(Math.pow((end.x - start.x), 2) + Math.pow((end.y - start.y), 2));
     }
 
     public void setStart(Point start) {
@@ -42,7 +42,7 @@ public class Line extends Point {
 
     @Override
     public String toString() {
-        return "Line starts from ("+start.x+","+start.y+") to ("+end.x+","+end.y+")";
+        return "Line starts from (" + start.x + "," + start.y + ") to (" + end.x + "," + end.y + ")";
     }
 
     public static void main(String[] args) {

@@ -4,5 +4,11 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "java.project.sourcePaths": [
+        "week7/practical_6",
+        "week6/practical_5",
+        "week5/practical_4",
+        "week8/practical_7/Generics"
+    ]
 }
